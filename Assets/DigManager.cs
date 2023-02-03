@@ -9,14 +9,31 @@ public class DigManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            print(hit.collider.tag);
-            if (hit.collider.CompareTag("cube"))
+            //print(hit.collider.tag);
+            if (hit)
             {
-                hit.collider.GetComponent<CubeScript>().isClicked();
+                if (hit.collider.CompareTag("cube"))
+                {
+                    hit.collider.GetComponent<CubeScript>().isClicked();
+                }
             }
+            
+        }
+        if (Input.GetMouseButton(1))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            //print(hit.collider.tag);
+            if (hit)
+            {
+                if (hit.collider.CompareTag("cube"))
+                {
+                    hit.collider.GetComponent<CubeScript>().isDeclicked();
+                }
+            }
+
         }
     }
 }
