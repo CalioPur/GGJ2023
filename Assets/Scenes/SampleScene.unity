@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.1558835e-17, y: -2.0259334e-17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 4346524747777885652, guid: 03c4e2cc66ce7c94fbed5e1274edc476, type: 3}
   row: 55
-  col: 31
+  col: 16
 --- !u!4 &1090589785
 Transform:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090589783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 21.5, z: -1}
+  m_LocalPosition: {x: -3.78, y: 21.77, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -551,7 +551,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63ca98b30a9026c48bc38f9e8f442604, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00bd8c068b3b563419f661d243538a59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -570,8 +570,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076276791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17, y: 17, z: 1}
+  m_LocalPosition: {x: 0.007, y: -0.2298, z: 0}
+  m_LocalScale: {x: 1.7802387, y: 1.7802387, z: 1.7802387}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -594,7 +594,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 2.56}
+    oldSize: {x: 12.005957, y: 25.48}
     newSize: {x: 1.28, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -602,7 +602,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.64, y: 1.28}
-      - {x: -0.64, y: -1.28}
-      - {x: 0.64, y: -1.28}
-      - {x: 0.64, y: 1.28}
+    - - {x: -6.0029783, y: 12.74}
+      - {x: -6.0029783, y: -12.74}
+      - {x: 6.0029783, y: -12.74}
+      - {x: 6.0029783, y: 12.74}
