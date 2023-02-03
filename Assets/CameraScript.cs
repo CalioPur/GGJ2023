@@ -17,6 +17,14 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         Ypos += Input.GetAxis("Mouse ScrollWheel") * sensitivity * Time.deltaTime;
+        if (Ypos > 5.2f)
+        {
+            Ypos = 5.2f;
+        }
+        else if(Ypos< -16.8f)
+        {
+            Ypos = -16.8f;
+        }
         Vector3 vec = new Vector3(transform.position.x, Ypos, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, vec, camSpeed);
     }
