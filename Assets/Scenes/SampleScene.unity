@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -330,6 +331,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f860272243b064dbb6b8ab4ef74373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576875043
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d63842e3027c384bb2d7472c0e62ba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 10000
-  camSpeed: 0.01
+  sensitivity: 5000
+  camSpeed: 0.05
 --- !u!114 &576875047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +445,53 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2076276794}
   m_Damping: 0.5
   m_MaxWindowSize: -1
+--- !u!1 &1090589783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090589785}
+  - component: {fileID: 1090589784}
+  m_Layer: 0
+  m_Name: Bois
+  m_TagString: cube
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1090589784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090589783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637f5884d1721d848a31b84d53ab8722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cube: {fileID: 4346524747777885652, guid: 03c4e2cc66ce7c94fbed5e1274edc476, type: 3}
+  row: 55
+  col: 31
+--- !u!4 &1090589785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090589783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 21.5, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076276791
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +503,7 @@ GameObject:
   - component: {fileID: 2076276793}
   - component: {fileID: 2076276792}
   - component: {fileID: 2076276794}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arbreDeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
