@@ -11,6 +11,7 @@ public class CubeScript : MonoBehaviour
     
 
     public DigManager digManager;
+    public HealthTree healthTree;
 
     Color Coridor = new Color(0.72f, 0.72f, 0.72f);
     Color Nurserie = new Color(0.73f, 0.32f, 0.55f);
@@ -41,22 +42,27 @@ public class CubeScript : MonoBehaviour
             case "coridor":
                 GetComponent<SpriteRenderer>().color = Coridor;
                 digManager.nbCoridor++;
+                healthTree.getHurt(1);
                 break;
             case "nurserie":
                 GetComponent<SpriteRenderer>().color = Nurserie;
                 digManager.nbNurserie++;
+                healthTree.getHurt(10);
                 break;
             case "stockEau":
                 GetComponent<SpriteRenderer>().color = StockEau;
                 digManager.nbEau++;
+                healthTree.getHurt(2);
                 break;
             case "stockMiella":
                 GetComponent<SpriteRenderer>().color = StockMiellat;
                 digManager.nbMiellat++;
+                healthTree.getHurt(2);
                 break;
             case "farmPuce":
                 digManager.nbFarm++;
                 GetComponent<SpriteRenderer>().color = FarmPuce;
+                healthTree.getHurt(4);
                 break;
         }
         digged = true;
