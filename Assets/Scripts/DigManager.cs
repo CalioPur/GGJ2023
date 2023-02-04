@@ -15,8 +15,9 @@ public class DigManager : MonoBehaviour
             //print(hit.collider.tag);
             if (hit)
             {
-                if (hit.collider.CompareTag("cube"))
+                if (hit.collider.CompareTag("cube") && !hit.collider.GetComponent<CubeScript>().digged)
                 {
+                    hit.collider.GetComponent<CubeScript>().room = PlayerPrefs.GetString("roomType", "coridor");
                     SeekFreeAnt(hit.collider.gameObject, hit);
                     
                     

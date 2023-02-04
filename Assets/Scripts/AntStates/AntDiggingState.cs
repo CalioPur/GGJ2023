@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AntDiggingState : AntBaseState
 {
-    public float digTime = 1.5f;
+    public float digTime = .5f;
     float timeElapsed = 0;
     GameObject cube;
     public AntDiggingState(GameObject c)
@@ -17,14 +17,18 @@ public class AntDiggingState : AntBaseState
     }
     public override void UpdateState(AntStateManager ant)
     {
-        while (timeElapsed > digTime)
+        if (timeElapsed < digTime)
         {
             timeElapsed += Time.deltaTime;
             ant.transform.Rotate(0, 0, Random.Range(-5.0f, 5f));
         }
-        Object.Destroy(cube);
-        ant.occupied = false;
-        ant.SwitchState(ant.IdleState);
+        else
+        {
+            cube.GetComponent<CubeScript>().isDigged();
+            ant.occupied = false;
+            ant.SwitchState(ant.IdleState);
+        }
+        
     }
     public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
     {
