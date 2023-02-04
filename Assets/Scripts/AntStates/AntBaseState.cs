@@ -7,6 +7,6 @@ public abstract class AntBaseState
     
     public abstract void UpdateState(AntStateManager ant);
 
-    public abstract void OnCollisionEnter(AntStateManager ant);
+    public abstract void OnCollisionEnter(AntStateManager ant, Collision2D collision);
 
 }

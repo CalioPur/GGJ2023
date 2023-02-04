@@ -12,7 +12,7 @@ public class AntGoingDig : AntBaseState
     {
 
     }
-    public override void OnCollisionEnter(AntStateManager ant)
+    public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
     {
 
     }

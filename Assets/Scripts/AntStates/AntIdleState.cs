@@ -17,7 +17,7 @@ public class AntIdleState : AntBaseState
         ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f));
 
     }
-    public override void OnCollisionEnter(AntStateManager ant)
+    public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
     {
 
     }
