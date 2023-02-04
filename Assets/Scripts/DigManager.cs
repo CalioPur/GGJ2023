@@ -5,6 +5,13 @@ using UnityEngine;
 public class DigManager : MonoBehaviour
 {
     public GameObject Ants;
+    public GameObject ant;
+
+    public int nbCoridor;
+    public int nbNurserie;
+    public int nbEau;
+    public int nbMiellat;
+    public int nbFarm;
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +28,10 @@ public class DigManager : MonoBehaviour
                     SeekFreeAnt(hit.collider.gameObject, hit);
                     
                     
+                }
+                else if(hit.collider.CompareTag("Queen") && Ants.transform.childCount<nbNurserie/3) 
+                {
+                    Instantiate(ant, hit.collider.transform.position, hit.collider.transform.rotation, Ants.transform);
                 }
             }
             

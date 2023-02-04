@@ -7,11 +7,19 @@ public class CubeScript : MonoBehaviour
     public bool selected = false;
     public bool digged = false;
     public string room;
+
+    
+
+    public DigManager digManager;
+
     Color Coridor = new Color(0.72f, 0.72f, 0.72f);
     Color Nurserie = new Color(0.73f, 0.32f, 0.55f);
     Color StockMiellat = new Color(0.88f, 0.71f, 0.22f );
     Color StockEau = new Color(0.38f, 0.53f , 0.39f );
     Color FarmPuce = new Color(0.77f , 0.99f , 0.4f);
+
+    
+    
 
     public AntStateManager antAssociated;
     public void isClicked()
@@ -32,17 +40,22 @@ public class CubeScript : MonoBehaviour
         {
             case "coridor":
                 GetComponent<SpriteRenderer>().color = Coridor;
+                digManager.nbCoridor++;
                 break;
             case "nurserie":
                 GetComponent<SpriteRenderer>().color = Nurserie;
+                digManager.nbNurserie++;
                 break;
             case "stockEau":
                 GetComponent<SpriteRenderer>().color = StockEau;
+                digManager.nbEau++;
                 break;
             case "stockMiella":
                 GetComponent<SpriteRenderer>().color = StockMiellat;
+                digManager.nbMiellat++;
                 break;
             case "farmPuce":
+                digManager.nbFarm++;
                 GetComponent<SpriteRenderer>().color = FarmPuce;
                 break;
         }

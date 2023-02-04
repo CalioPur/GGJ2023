@@ -6,7 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     public int sensitivity;
     public float camSpeed;
-    float Ypos = 0;
+    float Ypos = 23;
     // Start is called before the first frame update
     void Start()
     {
