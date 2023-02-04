@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DigManager : MonoBehaviour
 {
-
+    public GameObject Ants;
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +17,9 @@ public class DigManager : MonoBehaviour
             {
                 if (hit.collider.CompareTag("cube"))
                 {
-                    hit.collider.GetComponent<CubeScript>().isClicked();
+                    SeekFreeAnt(hit.collider.gameObject, hit);
+                    
+                    
                 }
             }
             
@@ -28,12 +30,34 @@ public class DigManager : MonoBehaviour
             //print(hit.collider.tag);
             if (hit)
             {
-                if (hit.collider.CompareTag("cube"))
+                if (hit.collider.CompareTag("cube") && hit.collider.GetComponent<CubeScript>().selected)
                 {
                     hit.collider.GetComponent<CubeScript>().isDeclicked();
+                    AntStateManager cubeAnt = hit.collider.GetComponent<CubeScript>().antAssociated;
+                    cubeAnt.SwitchState(cubeAnt.IdleState);
+                    cubeAnt.occupied = false;
                 }
             }
 
+        }
+    }
+    void SeekFreeAnt(GameObject cube, RaycastHit2D hit)
+    {
+        if (!cube.GetComponent<CubeScript>().selected)
+        {
+            foreach (AntStateManager ant in Ants.GetComponentsInChildren<AntStateManager>())
+            {
+                if (!ant.occupied)
+                {
+                    hit.collider.GetComponent<CubeScript>().isClicked();
+                    hit.collider.GetComponent<CubeScript>().antAssociated = ant;
+                    AntGoingDig GoingDigState = new AntGoingDig(cube);
+                    ant.SwitchState(GoingDigState);
+                    ant.occupied = true;
+                    
+                    break;
+                }
+            }
         }
     }
 }

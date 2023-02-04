@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeScript : MonoBehaviour
 {
     public bool selected = false;
+    public AntStateManager antAssociated;
     public void isClicked()
     {
         if (!selected)
@@ -17,7 +18,7 @@ public class CubeScript : MonoBehaviour
     }
     public void isDeclicked()
     {
-        if (!selected)
+        if (selected)
         {
             GetComponent<SpriteRenderer>().color = new Color(0.7450981f, 0.4941177f, 0.1529412f) ;
         }

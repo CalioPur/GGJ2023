@@ -7,8 +7,10 @@ public class AntStateManager : MonoBehaviour
     AntBaseState currentState;
 
     public AntIdleState IdleState = new AntIdleState();
-    public AntGoingDig GoingDigState = new AntGoingDig();
-    public AntDiggingState DiggingState = new AntDiggingState();
+    //public AntGoingDig GoingDigState = new AntGoingDig();
+    //public AntDiggingState DiggingState = new AntDiggingState();
+
+    public bool occupied;
 
     private void Start()
     {
@@ -24,7 +26,7 @@ public class AntStateManager : MonoBehaviour
         currentState = state;
         currentState.EnterState(this);
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
         currentState.OnCollisionEnter(this, collision);
     }

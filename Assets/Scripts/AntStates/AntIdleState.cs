@@ -12,8 +12,6 @@ public class AntIdleState : AntBaseState
     {
         ant.transform.position += (-ant.transform.right) * (Time.deltaTime * 0.5f);
 
-
-
         ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f));
 
     }
