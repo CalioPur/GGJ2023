@@ -25,5 +25,10 @@ public class AntGoingDig : AntBaseState
         {
             ant.SwitchState(new AntDiggingState(cube));
         }
+        //if not my cube (but still a cube)
+        else if (collision.gameObject.CompareTag("cube") && collision.gameObject.GetComponent<CubeScript>().selected)
+        {
+            ant.SwitchState(new AntDiggingOther(collision.gameObject,cube));
+        }
     }
 }

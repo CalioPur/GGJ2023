@@ -17,6 +17,10 @@ public class AntIdleState : AntBaseState
     }
     public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
     {
-
+        //if idle but encounters selected cube
+        if (collision.gameObject.CompareTag("cube") && collision.gameObject.GetComponent<CubeScript>().selected)
+        {
+            ant.SwitchState(new AntDiggingOther(collision.gameObject, null));
+        }
     }
 }

@@ -13,7 +13,7 @@ public class AntDiggingState : AntBaseState
     }
     public override void EnterState(AntStateManager ant)
     {
-        Debug.LogWarning("Diggi hole(V2)");
+        //Debug.LogWarning("Diggi hole(V2)");
     }
     public override void UpdateState(AntStateManager ant)
     {
