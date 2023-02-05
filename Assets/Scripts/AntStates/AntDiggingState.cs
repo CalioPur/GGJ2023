@@ -20,7 +20,7 @@ public class AntDiggingState : AntBaseState
         if (timeElapsed < digTime)
         {
             timeElapsed += Time.deltaTime;
-            ant.transform.Rotate(0, 0, Random.Range(-5.0f, 5f) * Time.deltaTime * 200);
+            ant.transform.Rotate(0, 0, Random.Range(-5.0f, 5f) * Time.deltaTime * 100);
         }
         else
         {
