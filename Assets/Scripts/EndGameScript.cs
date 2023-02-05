@@ -13,7 +13,7 @@ public class EndGameScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Ants.transform.childCount >= 200)
+        if (Ants.transform.childCount >= 100)
         {
             Time.timeScale = 0f;
             winPanel.SetActive(true);

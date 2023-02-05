@@ -46,7 +46,7 @@ public class CubeManager : MonoBehaviour
                 marchingSquareArray[indexCubeX, indexCubeY] = 1;
             else messageDebug += "\n Error at (" + indexCubeX + "," + indexCubeY + ")";
         }
-
+        
         messageDebug += "\n\n array result : ";
         for (int indexY = marchingSquareArray.GetLength(1)-1; indexY >= 0; indexY--)
         {

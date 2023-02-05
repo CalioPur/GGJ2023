@@ -23,7 +23,7 @@ public class AntDiggingOther : AntBaseState
         if (timeElapsed < digTime)
         {
             timeElapsed += Time.deltaTime;
-            ant.transform.Rotate(0, 0, (Random.Range(-5.0f, 5f))*Time.deltaTime*500);
+            ant.transform.Rotate(0, 0, (Random.Range(-5.0f, 5f))*Time.deltaTime*200);
         }
         else
         {
@@ -45,6 +45,7 @@ public class AntDiggingOther : AntBaseState
                 ant.SwitchState(ant.IdleState);
             }
         }
+        //ant.transform.rotation = new Quaternion(0, 0, ant.transform.rotation.z, ant.transform.rotation.w);
     }
 
     public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)

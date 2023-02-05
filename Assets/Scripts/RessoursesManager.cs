@@ -49,7 +49,7 @@ public class RessoursesManager : MonoBehaviour
 
         eauText.text = eauAmount + "/" + eauLimit;
         miellatText.text = miellatAmount + "/" + miellatLimit;
-        antText.text = antAmount + "/200";
+        antText.text = antAmount + "/100";
     }
 
     

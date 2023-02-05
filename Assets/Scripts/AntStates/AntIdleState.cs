@@ -12,7 +12,8 @@ public class AntIdleState : AntBaseState
     {
         ant.transform.position += (-ant.transform.right) * (Time.deltaTime * 0.5f);
 
-        ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f) * Time.deltaTime * 500);
+        ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f) * Time.deltaTime * 200);
+        //ant.transform.rotation = new Quaternion(0, 0, ant.transform.rotation.z, ant.transform.rotation.w);
 
     }
     public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
