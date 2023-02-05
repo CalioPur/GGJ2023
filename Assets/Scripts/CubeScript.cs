@@ -36,7 +36,7 @@ public class CubeScript : MonoBehaviour
 
     public void isDigged()
     {
-       
+        digManager.gameObject.GetComponent<AudioSource>().Play();
         switch (room)
         {
             case "coridor":

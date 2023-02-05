@@ -6,8 +6,8 @@ using TMPro;
 public class RessoursesManager : MonoBehaviour
 {
 
-    int miellatAmount = 0;
-    int eauAmount = 0;
+    public int miellatAmount = 0;
+    public int eauAmount = 0;
 
     public DigManager digManager;
     public HealthTree healthTree;

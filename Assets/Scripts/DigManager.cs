@@ -8,6 +8,8 @@ public class DigManager : MonoBehaviour
     public GameObject Ants;
     public GameObject ant;
 
+    public RessoursesManager ress;
+
     public int nbCoridor;
     public int nbNurserie;
     public int nbEau;
@@ -32,7 +34,13 @@ public class DigManager : MonoBehaviour
                 }
                 else if(hit.collider.CompareTag("Queen") && Ants.transform.childCount<nbNurserie/3) 
                 {
-                    Instantiate(ant, hit.collider.transform.position, hit.collider.transform.rotation, Ants.transform);
+                    if (ress.eauAmount > 0 && ress.miellatAmount > 0)
+                    {
+                        ress.eauAmount--;
+                        ress.miellatAmount--;
+                        Instantiate(ant, hit.collider.transform.position, hit.collider.transform.rotation, Ants.transform);
+                    }
+                    
                 }
             }
             
@@ -45,6 +53,8 @@ public class DigManager : MonoBehaviour
             {
                 if (hit.collider.CompareTag("cube") && hit.collider.GetComponent<CubeScript>().selected)
                 {
+                    if(ress.eauAmount>0 && ress.miellatAmount > 0) { 
+                    }
                     hit.collider.GetComponent<CubeScript>().isDeclicked();
                     AntStateManager cubeAnt = hit.collider.GetComponent<CubeScript>().antAssociated;
                     cubeAnt.SwitchState(cubeAnt.IdleState);
