@@ -39,6 +39,6 @@ public class TimeAndMenu : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Main Menu");
     }
 }
