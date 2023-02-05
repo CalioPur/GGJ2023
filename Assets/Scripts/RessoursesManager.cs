@@ -11,21 +11,22 @@ public class RessoursesManager : MonoBehaviour
 
     public DigManager digManager;
     public HealthTree healthTree;
+    public GameObject Ants;
     float productionCoolDown = 2f;
     float timeElapsed = 0f;
     public TextMeshProUGUI eauText;
     public TextMeshProUGUI miellatText;
+    public TextMeshProUGUI antText;
 
     private void Update()
     {
         int eauLimit = digManager.nbEau*2;
         int miellatLimit = digManager.nbMiellat;
+        int antAmount = Ants.transform.childCount;
 
         if (timeElapsed< productionCoolDown)
         {
             timeElapsed += Time.deltaTime;
-            eauText.text = eauAmount + "/" + eauLimit;
-            miellatText.text = miellatAmount + "/" + miellatLimit;
         }
         else
         {
@@ -42,9 +43,13 @@ public class RessoursesManager : MonoBehaviour
             {
                 miellatAmount = miellatLimit;
             }
-            eauText.text = eauAmount + "/" + eauLimit;
-            miellatText.text = miellatAmount + "/" + miellatLimit;
+            
         }
+        
+
+        eauText.text = eauAmount + "/" + eauLimit;
+        miellatText.text = miellatAmount + "/" + miellatLimit;
+        antText.text = antAmount + "/200";
     }
 
     

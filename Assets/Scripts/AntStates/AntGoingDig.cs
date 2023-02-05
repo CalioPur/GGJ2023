@@ -17,7 +17,7 @@ public class AntGoingDig : AntBaseState
     {
         ant.transform.position += (-ant.transform.right) * (Time.deltaTime * 0.5f);
         ant.transform.right = -(cube.transform.position - ant.transform.position);
-        ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f));
+        ant.transform.Rotate(0, 0, Random.Range(-10.0f, 10f) * Time.deltaTime * 500);
     }
     public override void OnCollisionEnter(AntStateManager ant, Collision2D collision)
     {

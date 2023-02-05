@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DigManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class DigManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             //print(hit.collider.tag);
@@ -36,7 +37,7 @@ public class DigManager : MonoBehaviour
             }
             
         }
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1)&&!EventSystem.current.IsPointerOverGameObject())
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             //print(hit.collider.tag);
