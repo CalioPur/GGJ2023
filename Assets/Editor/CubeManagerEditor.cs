@@ -17,6 +17,7 @@ public class CubeManagerEditor : Editor
         if (GUILayout.Button("GenerateMatrix"))
         {
             cubeManager.GenerateMatrix();
+            
         }
     }
 }
