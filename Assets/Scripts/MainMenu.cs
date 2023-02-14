@@ -7,12 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject creditsPanel;
     public GameObject HtPPanel;
-
-    public void Start()
+    private void Start()
     {
-        Time.timeScale = 1;        
+        Time.timeScale = 1;
     }
-
     public void Quit()
     {
         print("quitting");
